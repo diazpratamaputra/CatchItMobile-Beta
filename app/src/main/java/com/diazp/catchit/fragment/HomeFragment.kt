@@ -1,5 +1,6 @@
 package com.diazp.catchit.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,15 +10,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.diazp.catchit.R
+import com.diazp.catchit.activity.AkunActivity
+import com.diazp.catchit.activity.MasukActivity
 import com.diazp.catchit.adapter.AdapterCarousel
 import com.diazp.catchit.adapter.AdapterProduk
+import com.diazp.catchit.helper.SharedPref
 import com.diazp.catchit.model.Produk
+import de.hdodenhof.circleimageview.CircleImageView
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), View.OnClickListener {
     lateinit var vpCarousel: ViewPager
     lateinit var rvRiwayat: RecyclerView
     lateinit var rvFavorit: RecyclerView
     lateinit var rvPilihan: RecyclerView
+    lateinit var ivUserProfile: CircleImageView
+    private lateinit var sp: SharedPref
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,6 +59,12 @@ class HomeFragment : Fragment() {
 
         rvPilihan.adapter = AdapterProduk(arrayPilihan)
         rvPilihan.layoutManager = lmPilihan
+
+        ivUserProfile = view.findViewById(R.id.iv_userProfile)
+        ivUserProfile.setOnClickListener(this)
+
+        val ini = activity
+        sp = SharedPref(ini!!)
 
         return view
     }
@@ -190,5 +203,19 @@ class HomeFragment : Fragment() {
         alProduk.add(p5)
 
         return alProduk
+    }
+
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            R.id.iv_userProfile -> {
+                if (sp.getStatusLogin()) {
+                    val intent = Intent (getActivity(), AkunActivity::class.java)
+                    getActivity()?.startActivity(intent)
+                } else {
+                    val intent = Intent (getActivity(), MasukActivity::class.java)
+                    getActivity()?.startActivity(intent)
+                }
+            }
+        }
     }
 }

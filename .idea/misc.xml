@@ -3,19 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_button_1.xml" value="0.1398148148148148" />
+        <entry key="app/src/main/res/drawable-v24/ic_button_2.xml" value="0.1398148148148148" />
+        <entry key="app/src/main/res/drawable-v24/ic_button_3.xml" value="0.1398148148148148" />
+        <entry key="app/src/main/res/drawable-v24/ic_header_banner.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/drawable-v24/ic_home_catchit.xml" value="0.15925925925925927" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14629629629629629" />
+        <entry key="app/src/main/res/drawable-v24/ic_login_button.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/drawable-v24/ic_starrating_catchit.xml" value="0.14907407407407408" />
         <entry key="app/src/main/res/drawable-v24/rating_catchit.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/drawable-v24/white_rectangle_background.xml" value="0.14351851851851852" />
         <entry key="app/src/main/res/drawable/header_background.xml" value="0.1537037037037037" />
+        <entry key="app/src/main/res/drawable/ic_banner_catchit.xml" value="0.1398148148148148" />
+        <entry key="app/src/main/res/drawable/ic_button_2.xml" value="0.5" />
+        <entry key="app/src/main/res/drawable/ic_catchit.xml" value="0.14351851851851852" />
         <entry key="app/src/main/res/drawable/ic_favorit_catchit.xml" value="0.15648148148148147" />
         <entry key="app/src/main/res/drawable/ic_filter_catchit.xml" value="0.1537037037037037" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.14351851851851852" />
         <entry key="app/src/main/res/drawable/ic_location_catchit.xml" value="0.1537037037037037" />
+        <entry key="app/src/main/res/drawable/ic_logo_catchit.xml" value="0.14351851851851852" />
         <entry key="app/src/main/res/drawable/ic_notifikasi_catchit.xml" value="0.15648148148148147" />
         <entry key="app/src/main/res/drawable/ic_search_catchit.xml" value="0.1537037037037037" />
         <entry key="app/src/main/res/drawable/ic_verticalline_catchit.xml" value="0.1537037037037037" />
+        <entry key="app/src/main/res/drawable/logo_background.xml" value="0.14351851851851852" />
         <entry key="app/src/main/res/drawable/produk_background.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/layout/activity_akun.xml" value="0.27808988764044945" />
+        <entry key="app/src/main/res/layout/activity_baru.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19479166666666667" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_favorit.xml" value="0.19479166666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_jadwal.xml" value="0.19479166666666667" />
@@ -23,6 +40,8 @@
         <entry key="app/src/main/res/layout/item_carousel.xml" value="0.19479166666666667" />
         <entry key="app/src/main/res/layout/item_produk.xml" value="0.2725" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14351851851851852" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14629629629629629" />
       </map>
     </option>
   </component>

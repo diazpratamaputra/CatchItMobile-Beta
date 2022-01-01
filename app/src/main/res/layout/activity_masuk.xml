@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MasukActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sambutan"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_1"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_logo_catchit"
+            android:contentDescription="logo aplikasi" />
+
+        <Button
+            android:id="@+id/btn_proses_login"
+            android:backgroundTint="@color/gray_1"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/masuk" />
+
+        <Button
+            android:id="@+id/btn_proses_register"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gray_1"
+            android:backgroundTint="@color/white"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:text="@string/daftar" />
+
+    </LinearLayout>
+
+</RelativeLayout>

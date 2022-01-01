@@ -13,4 +13,13 @@
     <string name="selengkapnya">Selengkapnya</string>
     <string name="favorit">Favorit</string>
     <string name="pilihan_untuk_anda">Pilihan untuk Anda</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="sambutan">Selamat datang di</string>
+    <string name="masuk">Masuk</string>
+    <string name="daftar">Daftar</string>
 </resources>

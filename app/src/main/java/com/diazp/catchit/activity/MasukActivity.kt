@@ -8,20 +8,17 @@ import com.diazp.catchit.helper.SharedPref
 import kotlinx.android.synthetic.main.activity_masuk.*
 
 class MasukActivity : AppCompatActivity() {
-    lateinit var sp: SharedPref
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_masuk)
-
-        sp = SharedPref(this)
 
         mainButton()
     }
 
     private fun mainButton() {
         btn_proses_login.setOnClickListener{
-            sp.setStatusLogin(true)
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         btn_proses_register.setOnClickListener {

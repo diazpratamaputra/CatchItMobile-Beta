@@ -63,7 +63,6 @@
                     android:text="@string/login" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputEmail"
                     style="@style/parent"
                     android:layout_marginTop="@dimen/loginViewsMargin">
 
@@ -76,9 +75,9 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputPassword"
                     style="@style/parent"
-                    android:layout_marginTop="@dimen/loginViewsMargin">
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    app:passwordToggleEnabled="true">
 
                     <EditText
                         android:id="@+id/et_password"

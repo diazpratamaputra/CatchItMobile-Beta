@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="270dp"
+    android:layout_marginVertical="1dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/produk_background"
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_ivusaha"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:cardCornerRadius="16dp">
+
+            <ImageView
+                android:id="@+id/iv_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/produk_catchit" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_nama_usaha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_ivusaha"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="Nama Produk"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_desc_usaha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nama_usaha"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="marquee"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="Deskripsi singkat mengenai produk atau tempat"
+            android:textColor="@color/gray_3"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tv_jam_operasional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_desc_usaha"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="marquee"
+            android:text="10.00 - 21.00"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

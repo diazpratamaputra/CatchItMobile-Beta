@@ -14,15 +14,15 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_alignParentEnd="true"
+            android:id="@+id/tv_rating_produk"
             style="@style/ShapeAppearanceOverlay.App.CornerRadius"
-            android:padding="4dp"
-            android:id="@+id/tv_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_margin="7dp"
             android:background="@drawable/white_rectangle_background"
             android:drawablePadding="3dp"
+            android:padding="4dp"
             android:text="4.2"
             android:textColor="@color/orange_2"
             android:textSize="10sp"
@@ -47,7 +47,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tv_nama"
+            android:id="@+id/tv_nama_produk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/card_ivproduk"
@@ -61,10 +61,10 @@
             android:textSize="13sp" />
 
         <TextView
-            android:id="@+id/tv_desc"
+            android:id="@+id/tv_desc_produk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_nama"
+            android:layout_below="@id/tv_nama_produk"
             android:layout_marginHorizontal="8dp"
             android:layout_marginTop="8dp"
             android:ellipsize="marquee"
@@ -75,14 +75,28 @@
             android:textSize="10sp" />
 
         <TextView
-            android:id="@+id/tv_time"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_rp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_desc"
-            android:layout_marginHorizontal="8dp"
+            android:layout_below="@id/tv_desc_produk"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:ellipsize="marquee"
-            android:text="10.00 - 21.00"
+            android:text="Rp."
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_harga_produk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_desc_produk"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toEndOf="@id/tv_rp"
+            android:ellipsize="marquee"
+            android:text="0"
             android:textColor="@color/black"
             android:textSize="11sp" />
 

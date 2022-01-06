@@ -66,6 +66,11 @@ class RegisterActivity : AppCompatActivity() {
                 if (respon.status == true) {
                     // Berhasil
                     sp.setStatusLogin(true)
+                    sp.setData(respon.data)
+                    //Dibawah ini sudah tidak terpakai karena digantikan dengan yang diatas.
+//                    sp.setString(sp.nama, respon.data.name)
+//                    sp.setString(sp.no_hp, respon.data.no_hp)
+//                    sp.setString(sp.email, respon.data.email)
                     val intent = Intent(this@RegisterActivity, MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)

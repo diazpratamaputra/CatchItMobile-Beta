@@ -4,6 +4,7 @@ import com.diazp.catchit.model.ResponseModel
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
@@ -22,4 +23,6 @@ interface ApiService {
         @Field("password") password: String
     ):Call<ResponseModel>
 
+    @GET("menu")
+    fun getData():Call<ResponseModel>
 }

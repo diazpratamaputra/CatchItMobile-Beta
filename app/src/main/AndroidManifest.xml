@@ -2,15 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.diazp.catchit">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/config_network"
         android:allowBackup="true"
         android:icon="@drawable/ic_logo_catchit"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_logo_catchit"
         android:supportsRtl="true"
         android:theme="@style/Theme.CatchIt">
+        <activity
+            android:name=".activity.DetailJasaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DetailProdukActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="false" />

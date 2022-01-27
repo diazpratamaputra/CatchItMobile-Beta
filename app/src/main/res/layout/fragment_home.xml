@@ -123,9 +123,9 @@
                         android:id="@+id/tv_produk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
                         android:text="Produk"
                         android:textColor="@color/gray_1"
-                        android:paddingStart="20dp"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 

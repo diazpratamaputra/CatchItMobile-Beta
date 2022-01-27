@@ -20,5 +20,6 @@
     <color name="gray_3">#A1A8AA</color>
     <color name="gray_4">#C4C4C4</color>
     <color name="yellow_1">#FFC700</color>
+    <color name="orange_1">#FFC107</color>
     <color name="orange_2">#D54C02</color>
 </resources>

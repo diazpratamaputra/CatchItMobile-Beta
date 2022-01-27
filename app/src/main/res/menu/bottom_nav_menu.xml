@@ -17,8 +17,8 @@
         android:title="@string/title_notifikasi" />
 
     <item
-        android:id="@+id/navigation_jadwal"
-        android:icon="@drawable/ic_jadwal_catchit"
-        android:title="@string/title_jadwal" />
+        android:id="@+id/navigation_keranjang"
+        android:icon="@drawable/ic_keranjang_catchit"
+        android:title="@string/keranjang" />
 
 </menu>

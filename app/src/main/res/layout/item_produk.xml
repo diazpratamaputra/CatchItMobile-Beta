@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_produk"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="160dp"
@@ -70,33 +71,21 @@
             android:ellipsize="marquee"
             android:lines="2"
             android:maxLines="2"
-            android:text="Deskripsi singkat mengenai produk atau tempat"
+            android:text="Deskripsi singkat mengenai produk"
             android:textColor="@color/gray_3"
             android:textSize="10sp" />
-
-        <TextView
-            android:id="@+id/tv_rp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_desc_produk"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:ellipsize="marquee"
-            android:text="Rp."
-            android:textColor="@color/black"
-            android:textSize="11sp" />
 
         <TextView
             android:id="@+id/tv_harga_produk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_desc_produk"
-            android:layout_marginBottom="5dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
-            android:layout_toEndOf="@id/tv_rp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
             android:ellipsize="marquee"
-            android:text="0"
+            android:text="Rp.0"
             android:textColor="@color/black"
             android:textSize="11sp" />
 

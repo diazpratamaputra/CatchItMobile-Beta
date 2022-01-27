@@ -1,5 +1,6 @@
 package com.diazp.catchit.api
 
+import com.diazp.catchit.util.Config
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

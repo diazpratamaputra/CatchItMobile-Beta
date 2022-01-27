@@ -79,10 +79,10 @@ class HomeFragment : Fragment(), View.OnClickListener {
         val lmRiwayat = LinearLayoutManager(activity)
         lmRiwayat.orientation = LinearLayoutManager.HORIZONTAL
 
-        rvProduk.adapter = AdapterProduk(listProduk)
+        rvProduk.adapter = AdapterProduk(requireActivity(), listProduk)
         rvProduk.layoutManager = lmProduk
 
-        rvJasa.adapter = AdapterJasa(listJasa)
+        rvJasa.adapter = AdapterJasa(requireActivity(), listJasa)
         rvJasa.layoutManager = lmJasa
 
         rvUsaha.adapter = AdapterUsaha(listUsaha)

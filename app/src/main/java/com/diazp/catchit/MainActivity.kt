@@ -1,5 +1,9 @@
 package com.diazp.catchit
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,17 +11,19 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.diazp.catchit.fragment.FavoritFragment
 import com.diazp.catchit.fragment.HomeFragment
-import com.diazp.catchit.fragment.JadwalFragment
+import com.diazp.catchit.fragment.KeranjangFragment
 import com.diazp.catchit.fragment.NotifikasiFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.channels.BroadcastChannel
 
 class MainActivity : AppCompatActivity() {
     private val FragmentHome: Fragment = HomeFragment()
     private val FragmentFavorit: Fragment = FavoritFragment()
     private val FragmentNotifikasi: Fragment = NotifikasiFragment()
-    private val FragmentJadwal: Fragment = JadwalFragment()
+    private val FragmentKeranjang: Fragment = KeranjangFragment()
     private val fm: FragmentManager = supportFragmentManager
     private var active: Fragment = FragmentHome
 
@@ -25,11 +31,21 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuItem: MenuItem
     private lateinit var bottomNavigationView: BottomNavigationView
 
+    private var dariDetails: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         NyiapinBottomNav()
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(message, IntentFilter("event:keranjang"))
+    }
+
+    val message: BroadcastReceiver = object: BroadcastReceiver() {
+        override fun onReceive(p0: Context?, p1: Intent?) {
+            dariDetails = true
+        }
     }
 
     fun NyiapinBottomNav() {
@@ -39,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             .hide(FragmentFavorit).commit()
         fm.beginTransaction().add(R.id.frame_layout_container, FragmentNotifikasi)
             .hide(FragmentNotifikasi).commit()
-        fm.beginTransaction().add(R.id.frame_layout_container, FragmentJadwal).hide(FragmentJadwal)
+        fm.beginTransaction().add(R.id.frame_layout_container, FragmentKeranjang).hide(FragmentKeranjang)
             .commit()
 
         bottomNavigationView = findViewById(R.id.nav_view)
@@ -62,8 +78,8 @@ class MainActivity : AppCompatActivity() {
                     GantiFragment(2, FragmentNotifikasi)
                 }
 
-                R.id.navigation_jadwal -> {
-                    GantiFragment(3, FragmentJadwal)
+                R.id.navigation_keranjang -> {
+                    GantiFragment(3, FragmentKeranjang)
                 }
             }
 
@@ -76,5 +92,13 @@ class MainActivity : AppCompatActivity() {
         menuItem.isChecked = true
         fm.beginTransaction().hide(active).show(fragment).commit()
         active = fragment
+    }
+
+    override fun onResume() {
+        if (dariDetails) {
+            dariDetails = false
+            GantiFragment(3, FragmentKeranjang)
+        }
+        super.onResume()
     }
 }
